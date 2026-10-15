@@ -1,17 +1,30 @@
-# timekeeper_app
+# Timekeeper
 
-A new Flutter project.
+![No AI-generated code](https://img.shields.io/badge/code-no_AI_generated-2E6D5A)
 
-## Getting Started
+A small Flutter timekeeping app and personal project. The goal is to keep it
+simple and local-first.
 
-This project is a starting point for a Flutter application.
+## Current Features
 
-A few resources to get you started if this is your first Flutter project:
+- Start and pause a stopwatch
+- Reset the elapsed time
+- Display elapsed time as hours, minutes, seconds, and milliseconds
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+The stopwatch currently runs in memory; elapsed time is not saved between app
+sessions yet.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Planned
+
+- Store time entries locally with SQLite and Drift
+- Add descriptions and link images to entries
+- Support backing up and restoring app data
+
+## Run Locally
+
+You'll need the [Flutter SDK](https://docs.flutter.dev/get-started/install).
+
+```sh
+flutter pub get
+flutter run
+```
