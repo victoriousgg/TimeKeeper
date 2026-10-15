@@ -1,5 +1,7 @@
 # Timekeeper
 
+test-signing
+
 ![No AI-generated code](https://img.shields.io/badge/code-no_AI_generated-2E6D5A)
 
 A small Flutter timekeeping app and personal project. The goal is to keep it
