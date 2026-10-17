@@ -1,7 +1,13 @@
 abstract final class TimeHelpers {
-  /**
-   * Converts a [Duration] to a string in the format of "HH:MM:SS".
-   */
-  static String durationToHmsString(Duration duration) =>
-      '${duration.inHours.toString().padLeft(2, '0')}:${(duration.inMinutes % 60).toString().padLeft(2, '0')}:${(duration.inSeconds % 60).toString().padLeft(2, '0')}';
+  ///Converts a [Duration] to a string in the format of "HH:MM:SS".
+  static String durationToHmsString({
+    required Duration duration,
+    Duration? existingTime,
+  }) {
+    if (existingTime != null) {
+      duration += existingTime;
+    }
+
+    return '${duration.inHours.toString().padLeft(2, '0')}:${(duration.inMinutes % 60).toString().padLeft(2, '0')}:${(duration.inSeconds % 60).toString().padLeft(2, '0')}';
+  }
 }

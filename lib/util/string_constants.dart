@@ -5,5 +5,5 @@ abstract final class StringConstants {
   static const String appVersion = '0.0.1';
   static const String floatingButtonTooltip = 'Toggle Stopwatch';
   static const String resetButtonTooltip = 'Reset Stopwatch';
-  static const String stopWatchLabel = 'Elapsed Time (milliseconds):';
+  static const String stopWatchLabel = 'Total Time';
 }
