@@ -8,22 +8,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:timekeeper_app/screen/base_layout_screen.dart';
+import 'package:timekeeper_app/util/time_helpers.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const BaseLayout());
+  test('formats hours, minutes, and seconds', () {
+    expect(
+      TimeHelpers.durationToHmsString(
+        duration: const Duration(
+          hours: 1,
+          minutes: 2,
+          seconds: 3,
+          milliseconds: 987,
+        ),
+      ),
+      '01:02:03',
+    );
+  });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('timer is reachable from navigation', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const MaterialApp(home: BaseLayout()));
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    await tester.tap(find.byIcon(Icons.timer_outlined));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('24:30:45'), findsOneWidget);
   });
 }

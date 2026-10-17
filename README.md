@@ -9,7 +9,7 @@ simple and local-first.
 
 - Start and pause a stopwatch
 - Reset the elapsed time
-- Display elapsed time as hours, minutes, seconds, and milliseconds
+- Display elapsed time as hours, minutes, and seconds
 
 The stopwatch currently runs in memory; elapsed time is not saved between app
 sessions yet.
